@@ -1,0 +1,39 @@
+<%#= render "shared/header" %>
+
+<div class='main'>
+
+  <div class= 'sub'>
+  <%#= image_tag "idea-plus.png", class:"sub-pict" %>
+    <div class='main-title'>この商品あと何必要？</div>
+    <input class="btn btn-primary" type="submit" value="アイディア募集する">
+  </div>
+  <div class='idea-contents'>
+    <h2 class='title'>ピックアップカテゴリー</h2>
+    <div class='subtitle'>
+      アイディア募集商品
+    </div>
+    <ul class='idea-lists'>
+      <%# if @idea.each do |idea| %>
+      <li class='list'>
+        <%# link_to idea_path(idea.id) do %>
+    <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+    <%# idea.name %>
+    <h5 class="card-title">
+      <%# idea.title %>
+    </h5>
+    <p class="card-text">
+      <%# idea.discription%>
+    </p>
+    <a href="#" class="btn btn-primary">アイディア投稿</a>
+    </div>
+  </div>
+      <%# end %>
+      </li>
+  <%# end %>
+    </ul>
+  </div>
+
+</div>
+<%#= render "shared/footer" %>
