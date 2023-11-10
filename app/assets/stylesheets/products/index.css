@@ -1,0 +1,62 @@
+/* 画面上部の「idea-plus」帯部分 */
+.container-fluid{
+  font-family: 'Playpen Sans', cursive;
+}
+.btn-primary{
+  background-color: rgb(232, 136, 149);
+  transition: background-color 0.3s ease;
+  border-color: white;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: gray;
+  border-color: white;
+  color: white;
+}
+
+.main {
+  background-color: pink;
+  height: 100vh;
+}
+
+/* 画面中央の「この商品あと何必要？」部分 */
+.sub {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  background-color: pink;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  padding-top: 100px;
+  font-size: 40px;
+  font-family: "Nico Moji";
+}
+
+/* ピックアップカテゴリー部分 */
+.product-contents{
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  background-color: pink;
+  text-align: center;
+  font-family: "Nico Moji";
+}
+
+.list{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Playpen Sans', cursive;
+}

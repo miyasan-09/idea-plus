@@ -1,38 +1,39 @@
-<%#= render "shared/header" %>
+<%= render "shared/header" %>
 
 <div class='main'>
 
   <div class= 'sub'>
-  <%#= image_tag "idea-plus.png", class:"sub-pict" %>
+  <%= link_to image_tag("idea-plus.jpg", class:"sub-pict") %>
     <div class='main-title'>この商品あと何必要？</div>
     <input class="btn btn-primary" type="submit" value="アイディア募集する">
   </div>
-  <div class='idea-contents'>
+  <div class='product-contents'>
     <h2 class='title'>ピックアップカテゴリー</h2>
     <div class='subtitle'>
       アイディア募集商品
     </div>
-    <ul class='idea-lists'>
-      <%# if @idea.each do |idea| %>
-      <li class='list'>
-        <%# link_to idea_path(idea.id) do %>
+    <div class='product-lists'>
+      <%# if @product.each do |product| %>
+      <div class='list'>
+        <%# link_to produc_path(product.id) do %>
     <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+    <%= image_tag("idea.jpg", class: "item-img") %>
     <div class="card-body">
-    <%# idea.name %>
+    <%# product.name %>
     <h5 class="card-title">
-      <%# idea.title %>
+      <%# product.title %>
+      こたつの本体
     </h5>
     <p class="card-text">
-      <%# idea.discription%>
+      <%# product.discription%>
+      こたつの本体に追加実装するなら、何が必要ですか？
     </p>
-    <a href="#" class="btn btn-primary">アイディア投稿</a>
     </div>
   </div>
       <%# end %>
-      </li>
+      </div>
   <%# end %>
-    </ul>
+    </div>
   </div>
 
 </div>
