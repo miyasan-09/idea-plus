@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root to: "ideas#index"
+  devise_for :companies
+  devise_for :users
+  root to: "products#index"
 end

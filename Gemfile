@@ -80,3 +80,5 @@ gem 'bootstrap', '~> 5.2.3'
 gem 'jquery-rails'
 
 gem 'sassc'
+
+gem 'devise'
