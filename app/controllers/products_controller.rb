@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 
   def index
-    #@idea = Idea
+    #@product = Product
   end
 end
