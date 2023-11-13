@@ -18,6 +18,9 @@
       <div class='list'>
         <%# link_to produc_path(product.id) do %>
     <div class="card" style="width: 18rem;">
+    <%= image_tag product.image.variant(resize: '500x500'), class: 'product-image' %>
+
+
     
     <%= image_tag("idea.jpg", class: "item-img") %>
     <div class="card-body">
