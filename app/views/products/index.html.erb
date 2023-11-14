@@ -3,38 +3,49 @@
 <div class='main'>
 
   <div class= 'sub'>
-  <%= link_to image_tag("idea-plus.jpg", class:"sub-pict") %>
+  <%= image_tag("idea-plus.jpg", class:"sub-pict", style: "border-radius: 10px;") %>
     <div class='main-title'>この商品あと何必要？</div>
-    <input class="btn btn-primary" type="submit" value="アイディア募集する">
+    <%= link_to "アイディア募集する", new_product_path, class:"btn btn-primary" %>
   </div>
   <div class='product-contents'>
     <h2 class='title'>ピックアップカテゴリー</h2>
-    <div class='subtitle'>
-      アイディア募集商品
-    </div>
+      <div class='subtitle'>アイディア募集商品</div>
 
-    <div class='product-lists'>
-      <%# if @product.each do |product| %>
-      <div class='list'>
-        <%# link_to produc_path(product.id) do %>
-    <div class="card" style="width: 18rem;">
-    
-    <%= image_tag("idea.jpg", class: "item-img") %>
+      <div class='product-lists'>
+
+    <% if @products.any? %>
+  <% @products.each do |product| %>
+    <div class='list'>
+      <%= link_to product_path(product.id) do %>
+        <div class="card" style="width: 18rem;">
+          <%= image_tag product.image.variant(resize: '500x500'), class: 'product-image' %>
+
+          <div class="card-body">
+            <%= product.name %>
+            <h5 class="card-title">
+              <%= product.title %>
+            </h5>
+            <p class="card-text">
+              <%= product.description %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+<% else %>
+  <div class='list'>
+    <%= image_tag("idea.jpg", class: "item-img", size: "200x200") %>
     <div class="card-body">
-    <%# product.name %>
-    <h5 class="card-title">
-      <%# product.title %>
-      こたつの本体
-    </h5>
-    <p class="card-text">
-      <%# product.discription%>
-      こたつの本体に追加実装するなら、何が必要ですか？
-    </p>
+      <h5 class="card-title">
+        こたつの本体
+      </h5>
+      <p class="card-text">
+        こたつの本体に追加実装するなら、何が必要ですか？
+      </p>
     </div>
   </div>
-      <%# end %>
-      </div>
-  <%# end %>
+<% end %>
     </div>
   </div>
 

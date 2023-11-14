@@ -1,0 +1,18 @@
+<div class='footer'>
+  <nav class="navbar fixed-top bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">企業様へのご案内</a>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <% if user_signed_in? %>
+       <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
+
+      <button class="btn btn-primary me-md-2" type="button" href="#">Loout</button>
+      <% else %>
+      <button class="btn btn-primary me-md-2" type="button" href="#">Login</button>
+      <button class="btn btn-primary" type="button" href="#">新規登録</button>
+      <% end %>
+
+      </div>
+    </div>
+  </nav>
+</div>
