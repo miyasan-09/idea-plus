@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>商品投稿ページ</title>
-  <!-- 必要なCSSやスタイルシートをここに追加 -->
-</head>
-<body>
 
-<header>
-  <!-- ヘッダー部分のコンテンツ -->
-</header>
-
-<main>
+  <div class="product-sell-main">
+    <div class="product-sell-title">
   <h1>商品を投稿する</h1>
   <%= form_with model:@product, data: { turbo: false },local: true do |f| %>
 
@@ -43,12 +31,5 @@
 
   </form>
   <% end %>
-
-</main>
-
-<footer>
-  <!-- フッター部分のコンテンツ -->
-</footer>
-
-</body>
-</html>
+    </div>
+  </div>
