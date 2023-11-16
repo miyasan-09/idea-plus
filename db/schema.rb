@@ -48,6 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_13_064652) do
   end
 
   create_table "companies", charset: "utf8", force: :cascade do |t|
+    t.string "name", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "phone_number", null: false
