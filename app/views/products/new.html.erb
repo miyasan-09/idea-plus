@@ -1,35 +1,37 @@
 
   <div class="product-sell-main">
     <div class="product-sell-title">
-  <h1>商品を投稿する</h1>
-  <%= form_with model:@product, data: { turbo: false },local: true do |f| %>
+    <h1>商品を投稿する</h1>
+    <%= form_with model:@product, data: { turbo: false },local: true do |f| %>
 
 
-  <form action="/products" method="post" enctype="multipart/form-data">
-    <!-- CSRFトークン -->
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <form action="/products" method="post" enctype="multipart/form-data">
+        <!-- CSRFトークン -->
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-    <!-- タイトル -->
-    <label for="product_name">タイトル:</label>
-    <%= f.text_area :title, class:"product-text", id:"name", placeholder:"タイトル（必須 40文字まで)", maxlength:"40" %>
+        <!-- タイトル -->
+        <div class="product_name">タイトル</div>
+        <%= f.text_area :title, class:"product-text", id:"name", placeholder:"タイトル（必須 40文字まで)", maxlength:"40" %>
 
-    <!-- 商品名 -->
-    <label for="product_name">商品名:</label>
-    <%= f.text_area :name, class:"product-text", id:"name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+        <!-- 商品名 -->
+        <div class="product_name">商品名</div>
+        <%= f.text_area :name, class:"product-text", id:"name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
 
-    <!-- 商品説明 -->
-    <label for="product_description">商品説明:</label>
-    <%= f.text_area :description, class:"product-text", id:"product-info", placeholder:"商品の説明（必須 1,000文字まで）例）こたつに追加したいアイディアを募集しています" ,rows:"7" ,maxlength:"1000" %>
+        <!-- 商品説明 -->
+        <div class="product_description">商品説明</div>
+        <%= f.text_area :description, class:"product-text", id:"product-info", placeholder:"商品の説明（必須 1,000文字まで）例）こたつに追加したいアイディアを募集しています" ,rows:"7" ,maxlength:"1000" %>
 
-    <!-- 商品画像 -->
-    <label for="product_image">商品画像:</label>
-    <%= f.file_field :image, id:"product-image" %>
+        <!-- 商品画像 -->
+        <div class="product_image">商品画像</div>
+        <%= f.file_field :image, id:"product-image" %>
 
 
-    <!-- 送信ボタン -->
-    <%= f.submit "アイディアを募集する" ,class:"sell-btn" %>
+        <!-- 送信ボタン -->
+        <div class="sell-btn-contents">
+        <%= f.submit "アイディアを募集する" ,class:"sell-btn" %>
+        </div>
 
-  </form>
-  <% end %>
+      </form>
+    <% end %>
     </div>
   </div>

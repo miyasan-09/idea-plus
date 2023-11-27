@@ -1,0 +1,19 @@
+.product-sell-main {
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  /*display: flex;*/
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+  text-align: center;
+}
+
+.product-sell-title {
+  padding: 10vh 0;
+  text-align: center;
+}
+
+.sell-btn-contents {
+  text-align: center;
+  margin-top: 10px;
+}
