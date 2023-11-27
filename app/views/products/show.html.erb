@@ -1,0 +1,39 @@
+<%= render "shared/header" %>
+
+<%# 商品の概要 %>
+<div class="product-show">
+  <div class="product-box">
+    <h2 class="name">
+      <%= @product.name %>
+    </h2>
+    <div class="product-img-content">
+      <%= image_tag @product.image, class:"product-box-img" %>
+    </div>
+    <div class="title">
+    <%= @product.title %>
+    </div>
+    <div class="description">
+    <%= @product.description%>
+    </div>
+    <div class="company">
+    <%= @product.company%>
+    </div>
+
+    <%# /商品の概要 %>
+
+    <div class="comment-box">
+      <form>
+        <textarea class="comment-text"></textarea>
+        <p class="comment-warn">
+          下記のフォームを利用してアイデアの投稿を行えます。
+          <br>
+          商品に追加して欲しい機能を教えてください。
+        </p>
+        <button type="submit" class="comment-btn">
+        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+        <span>コメントする<span>
+        </button>
+     </form>
+    </div>
+  </div>
+</div>
