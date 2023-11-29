@@ -3,7 +3,12 @@
 <nav class="navbar fixed-top bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Idea plus</a>
-    
+    <ul class='lists-right'>
+      <% if company_signed_in? %>
+       <li><%= link_to current_company.name, "#", class: "company-name" %>様</li> 
+       <li><%= link_to 'ログアウト', destroy_company_session_path,data: { turbo_method: :delete }, method: :delete, class: "logout" %></li>
+      <% end %>
+    </ul>
   </div>
 </nav>
 </header>

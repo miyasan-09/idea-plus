@@ -7,7 +7,7 @@
       <%= @product.name %>
     </h2>
     <div class="product-img-content">
-      <%= image_tag @product.image, class:"product-box-img" %>
+      <%= image_tag @product.image, class:"product-box-img" if @product.image.attached? %>
     </div>
     <div class="title">
     <%= @product.title %>
@@ -16,7 +16,7 @@
     <%= @product.description%>
     </div>
     <div class="company">
-    <%= @product.company%>
+    <%= @product.company.name %>
     </div>
 
     <%# /商品の概要 %>
